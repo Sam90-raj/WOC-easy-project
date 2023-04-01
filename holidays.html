@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Places</title>
+    <link rel="stylesheet" href="holidays.css">
+
+    <script
+      src="https://kit.fontawesome.com/d69bc54ca8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+    .itemname{
+      text-decoration: underline;
+    }
+    .itemname:hover{
+      color: red;
+    }
+    .itemdescribe{
+      color: blue;
+    }
+    </style> 
+
+</head>
+
+<body>
+  <div class="backtext">
+    <a href="newhome.html" id="backhome">Go to Home</a>
+  </div>
+
+  <div id="set">
+    <h1  class="titleplace">Explore interesting places in your destination</h1>
+    <br><br><br>
+    <div class="placedescription">
+        View tourist attractions in 10 km radius from the place center. Click on the list and view item preview and description.
+    </div>
+    <br><br>
+    <div class="inputcity"> 
+        <i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #00364a;"></i>
+        <input type="text" id="city" placeholder="Enter destination city" />
+    </div>
+    <br><br><br><br>
+    <button id="holiday" type="button" onclick="searchplaces()">Search</button> 
+    <br><br><br>
+  </div>
+
+  <div id="hidedata" style="visibility: hidden" >
+    <div id="info"></div> 
+    <div class="actualdata">
+      <ul id="list"></ul>
+      <div id="points"></div>
+    </div>
+    <button id="next_button"></button>
+  </div> 
+
+  <script src="places.js"></script>
+
+</body>
+</html>

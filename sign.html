@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGN UP PAGE</title>
+    <link rel="stylesheet" href="sign.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="iconimg">
+        <img src="assets/rail-2.png" alt="" />
+      </div>
+
+      <div class="box">
+        <form id="Sign-Up">
+          <div class="container-signup">
+            <div class="heading">
+              <h1>Sign up here</h1>
+            </div>
+
+            <div>
+              <input type="text" id="email-signup" placeholder="Email" />
+            </div>
+
+            <div>
+              <input type="text" id="password-signup" placeholder="Password" />
+            </div>
+
+            <button id="signup">Sign up</button>
+          </div>
+        </form>
+        <div>
+          <hr
+            class="leftline"
+            style="
+              width: 42%;
+              text-align: left;
+              color: #551a8b;
+              margin-left: 5%;
+            "
+          />
+          <span class="middletext">OR</span>
+          <hr
+            class="rightline"
+            style="width: 42%; text-align: right; margin-right: 5%"
+          />
+        </div>
+
+        <br />
+
+        <div class="container-login">
+          <form id="Login">
+            <div class="heading">
+              <h1>Login here</h1>
+            </div>
+
+            <div>
+              <input type="text" id="email-login" placeholder="Email" />
+            </div>
+
+            <div>
+              <input type="text" id="password-login" placeholder="Password" />
+            </div>
+
+            <button id="login">Login</button>
+
+            
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="firebase.js" type="module"></script>
+    <script src="signup.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="newhome.css" />
+    <title>HOME PAGE</title>
+    <script
+      src="https://kit.fontawesome.com/d69bc54ca8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="grid">
+      <div class="logo">RAIL YATRA</div>
+
+      <div class="middle1">
+        <a href="newhome.html" class="tool1">Home</a>
+      </div>
+
+      <div class="middle2">
+        <a href="holidays.html" class="tool2">Tourist Sights</a>
+      </div>
+
+      <div class="lorem"></div>
+
+      <div class="lorem2"></div>
+
+      <div class="container">
+        <img src="assets/icon.png" id="img" />
+        <button id="logout">Logout</button>
+      </div>
+    </div>
+
+    <div class="flexbox" id="searchbox">
+      <div class="content">
+        <h1>SEARCH TRAINS</h1>
+      </div>
+   
+      <div class="input">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <input type="text" id="startingpoint" placeholder="From" />
+      </div>
+
+      <div class="input">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <input type="text" id="finalpoint" placeholder="To" />
+      </div>
+
+      <div class="input">
+        <i class="fa-regular fa-calendar-days"></i>
+        <input type="date" name="my date" id="date" placeholder="Date" />
+      </div>
+
+      <br />
+
+      <div>
+        <button id="btn" type="button" onclick="searchtrain()">
+          Search Trains
+        </button>
+      </div>
+      </div>
+    </div>
+
+    <div id="tablecontainer" style="display:none;">
+      <h1 id="tableheading"></h1>
+
+      <table class="table">
+        <thead>
+            <th scope="col">Train No.</th>
+            <th scope="col">Train Name</th>
+            <th scope="col">From</th>
+            <th scope="col">Departure</th>
+            <th scope="col">To</th>
+            <th scope="col">Arrival</th>
+            <th scope="col">Travel Time</th>
+        </thead>
+        <tbody id="tablebody">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tbody>
+      </table>
+
+      <div class="book">
+        <a href="https://www.irctc.co.in/nget/train-search" id="tool3">Book Tickets</a>
+       </div>
+
+    </div>
+    
+    <script src="train-api.js"></script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCxa4yXcQmeeefk0h6pUylkMfb30aFbuL4",
+        authDomain: "winter-of-code-27821.firebaseapp.com",
+        projectId: "winter-of-code-27821",
+        storageBucket: "winter-of-code-27821.appspot.com",
+        messagingSenderId: "389618249461",
+        appId: "1:389618249461:web:00f97c5ddf5cd10a5d9fbc",
+        measurementId: "G-M3K37SEK1G",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      export default app;
+
+      import {
+        getAuth,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+      const auth = getAuth(app);
+
+      document.getElementById("logout").addEventListener("click", function () {
+        signOut(auth)
+          .then(() => {
+            alert("You are successfully signed out!");
+            location.replace("Homepage.html");
+          })
+          .catch((error) => {
+            console.log("An error occurred.");
+          });
+      });
+    </script>
+  </body>
+</html>

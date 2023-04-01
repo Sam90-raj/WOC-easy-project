@@ -1,0 +1,105 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  background: url(assets/welcomeimg.png);
+  background-color: black;
+  margin: 0px;
+  background-repeat: no-repeat;
+  word-wrap: break-word;
+}
+
+ul.list {
+  list-style-type: none;
+}
+.welcome {
+  font-size: 75px;
+  color: blueviolet;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 200px;
+  float: inline-end;
+}
+
+.welcome:hover {
+  color: red;
+}
+.middle1 a {
+  text-decoration: none;
+  color: #551a8b;
+}
+
+.middle2 a {
+  text-decoration: none;
+  color: #551a8b;
+}
+
+.grid {
+  display: grid;
+  height: 7px;
+  grid-template-columns: 11;
+}
+
+.logo {
+  font-size: 32px;
+  padding: 8px 25px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: turquoise;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #551a8b;
+}
+
+.middle1 {
+  background-color: turquoise;
+  padding: 8px;
+  font-size: 30px;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  text-align: center;
+}
+
+.middle2 {
+  font-size: 30px;
+  padding: 8px 4px;
+  background-color: turquoise;
+  grid-column-start: 5;
+  grid-column-end: 7;
+  text-align: center;
+}
+
+.middle1 a:hover {
+  color: #551a22;
+}
+
+.middle2 a:hover {
+  color: #551a22;
+}
+
+.lorem {
+  grid-column-start: 7;
+  grid-column-end: 10;
+  background-color: turquoise;
+}
+
+.container {
+  grid-column-start: 10;
+  grid-column-end: 11;
+  background-color: turquoise;
+  display: flex;
+}
+
+#text {
+  padding: 8px 4px;
+  font-size: 30px;
+  text-decoration: none;
+  color: #551a8b;
+  text-align: center;
+}
+
+#text:hover {
+  color: #551a22;
+}
+
+#img {
+  padding: 9px 2px;
+}

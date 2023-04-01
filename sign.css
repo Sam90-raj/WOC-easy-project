@@ -1,0 +1,101 @@
+body {
+  background-color: bisque;
+  word-wrap: break-word;
+}
+
+input[type="text"] {
+  font-size: 20px;
+  border: 2px solid green;
+  padding: 8px 16px;
+  border-radius: 5px;
+  outline: none;
+}
+
+#email-signup {
+  margin: 30px;
+}
+
+#password-signup {
+  margin: 22px;
+}
+
+#email-login {
+  margin: 20px;
+}
+
+#password-login {
+  margin: 22px;
+}
+
+.heading {
+  font-size: 15px;
+  margin: 25px;
+  color: green;
+  text-decoration: underline;
+}
+
+#signup {
+  font-size: 25px;
+  margin: 25px;
+  border: 2px solid green;
+  width: 55%;
+  border-radius: 5px;
+  color: white;
+  background-color: green;
+}
+
+#signup:hover {
+  background-color: teal;
+}
+
+#login:hover {
+  background-color: teal;
+}
+
+#login {
+  font-size: 25px;
+  margin: 25px;
+  border: 2px solid green;
+  width: 55%;
+  border-radius: 5px;
+  color: white;
+  background-color: green;
+}
+
+.leftline {
+  float: left;
+}
+.middletext {
+  float: left;
+  color: green;
+}
+.rightline {
+  float: right;
+}
+
+.box {
+  display: flexbox;
+  flex-direction: column;
+  height: 740px;
+  width: 450px;
+  border: 2px solid green;
+  margin-top: 30px;
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.page {
+  display: grid;
+  grid-template-columns: 3;
+}
+.iconimg {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin-top: 100px;
+  margin-left: 70px;
+}
+
+#logout {
+  text-decoration: none;
+  color: green;
+}
